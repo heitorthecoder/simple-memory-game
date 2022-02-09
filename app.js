@@ -107,8 +107,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayResult.innerHTML = cardsWon.length
 
+    // display completed game and give the option to start another game
     if (cardsWon.length == (cardsArray.length / 2)) {
       displayResult.innerHTML = 'Congrats! you completed the game!'
+      setTimeout(() => {
+        alert('restart game')
+        window.location.reload()
+      }, 500)
     }
   }
 
