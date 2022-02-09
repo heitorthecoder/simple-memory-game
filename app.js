@@ -107,17 +107,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     displayResult.innerHTML = cardsWon.length
 
-    // display completed game and give the option to start another
     if (cardsWon.length == (cardsArray.length / 2)) {
       displayResult.innerHTML = 'Congrats! you completed the game!'
-      setTimeout(() => {
-        alert('Press "OK" to start a new one')
-        const cards = document.querySelectorAll('img')
-        for (let i = 0; i < cards.length; i++) {
-          grid.removeChild(cards[i])
-        }
-        handleBoardCreation()
-      }, 1000)
     }
   }
 
